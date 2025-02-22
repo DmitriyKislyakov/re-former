@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User new</title>
+</head>
+<body>
+    <h1>This is new User form</h1>
+    <form action="/users/new" accept-charset="UTF-8" method="post">
+        <label for="username">User name:</label>
+        <input type="text" id="username" name="username" placeholder="Your name">
+        <br>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="you@example.ru">
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br>
+        <input type="submit" value="Submit This Form">
+    </form>
+</body>
+</html>
