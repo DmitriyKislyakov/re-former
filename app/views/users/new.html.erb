@@ -7,7 +7,37 @@
 </head>
 <body>
     <h1>This is new User form</h1>
-    <form action="/users/new" accept-charset="UTF-8" method="post">
+    
+    <%= form_with model: @user, method: :post do |form| %>
+        <div>
+            <%= form.label :username, "Your user name: " %>
+            <%= form.text_field :username %> <br />
+            <%= form.label :email, "E-mail: " %>
+            <%= form.email_field :email %> <br />
+            <%= form.label :password, "Password: " %>
+            <%= form.password_field :password %>
+        </div>
+    <% end %>
+
+ <!--   
+    <%= form_tag("/users", method: "post") do %>
+        <div>
+            <%= label_tag(:username, 'User name')%>
+            <%= text_field_tag(:username)%>
+        </div>
+        <div>
+            <%= label_tag(:email, 'E-mail') %>
+            <%= email_field_tag(:email) %>
+        </div>
+        <div>
+            <%= label_tag(:password, "Password") %>
+            <%= password_field_tag(:password) %>
+        </div>
+    <% end %>
+-->
+ <!--   
+    <form action="/users" accept-charset="UTF-8" method="POST" data-turbo="false">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
         <label for="username">User name:</label>
         <input type="text" id="username" name="username" placeholder="Your name">
         <br>
@@ -19,5 +49,6 @@
         <br>
         <input type="submit" value="Submit This Form">
     </form>
+-->
 </body>
 </html>
