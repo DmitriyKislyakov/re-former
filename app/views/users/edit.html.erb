@@ -6,7 +6,7 @@
     <title>User new</title>
 </head>
 <body>
-    <h1>This is new User form</h1>
+    <h1>Change User form</h1>
     
     <%= form_with model: @user do |form| %>
         <ul>
@@ -14,17 +14,15 @@
             <li><%= msg %></li>
             <% end %>
         </ul>
+
         <div>
             <%= form.label :username, "Your user name: " %>
             <%= form.text_field :username, default: "YourUniqName" %> <br />
             <%= form.label :email, "E-mail: " %>
             <%= form.email_field :email, placeholder: "example@example.com" %> <br />
             <%= form.label :password, "Password: " %>
-            <%= form.password_field :password %>
-        </div>
-        <div>
-            <%= form.submit "Log in" %>
-        </div>
+            <%= form.password_field :password %> <br />
+            <%= form.submit "Update" %>
     <% end %>
 
  <!--   
